@@ -1,8 +1,10 @@
-const CACHE_NAME = "bristol-cache-v1";
+const CACHE_NAME = "bristol-cache-v2";
+const BASE_PATH = "/Bristol-Republic/"; // CHANGE THIS
+
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/manifest.json"
+  BASE_PATH,
+  BASE_PATH + "index.html",
+  BASE_PATH + "manifest.json"
 ];
 
 self.addEventListener("install", event => {
