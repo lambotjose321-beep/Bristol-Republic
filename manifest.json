@@ -1,7 +1,8 @@
 {
   "name": "Bristol Republic",
   "short_name": "Bristol",
-  "start_url": "/",
+  "start_url": "/Bristol-Republic/",
+  "scope": "/Bristol-Republic/",
   "display": "standalone",
   "background_color": "#f3f4f6",
   "theme_color": "#111827",
