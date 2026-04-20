@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bristol Republic</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#f3f4f6;
+  max-width:420px;
+  margin:auto;
+  padding-bottom:80px;
+}
+
+.page{
+  display:none;
+  padding:20px;
+}
+
+.page.active{
+  display:block;
+}
+
+/* Header */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.avatar{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:#111827;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Cards */
+.dark-card{
+  background:linear-gradient(135deg,#1f2937,#111827);
+  color:#fff;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.balance-card{
+  background:linear-gradient(135deg,#1e3a8a,#111827);
+  color:white;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:15px;
+}
+
+.white-card{
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+  margin-bottom:15px;
+}
+
+.offer-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.offer{
+  background:#fff;
+  border-radius:15px;
+  padding:15px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.offer-top{
+  height:90px;
+  background:linear-gradient(135deg,#374151,#111827);
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+button{
+  background:#111827;
+  color:white;
+  border:none;
+  padding:10px;
+  width:100%;
+  border-radius:12px;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+/* Profile */
+.profile-header{
+  background:linear-gradient(135deg,#1f2937,#111827);
+  color:white;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:15px;
+}
+
+.profile-stats{
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-around;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+  margin-top:-25px;
+  margin-bottom:15px;
+}
+
+.list-item{
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  margin-bottom:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Bottom Nav */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  max-width:420px;
+  background:#fff;
+  display:flex;
+  justify-content:space-around;
+  padding:12px 0;
+  border-top:1px solid #ddd;
+}
+
+.nav-item{
+  font-size:12px;
+  text-align:center;
+  color:#777;
+  cursor:pointer;
+}
+
+.nav-item.active{
+  color:#111827;
+  font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+  <div class="header">
+    <div>
+      <small>Good morning 👋</small>
+      <h2>John Angac</h2>
+    </div>
+    <div class="avatar">J</div>
+  </div>
+
+  <div class="dark-card">
+    <h4>BRISTOL REPUBLIC</h4>
+    <p>Silver Member</p>
+    <h1>67 pts</h1>
+    <small>Member since 2024</small>
+  </div>
+</div>
+
+<!-- REWARDS PAGE -->
+<div id="rewards" class="page">
+  <h2>Rewards</h2>
+  <p style="color:#6b7280;margin-bottom:15px;">Redeem your points for amazing rewards</p>
+
+  <input type="text" placeholder="Search offers..." 
+  style="width:100%;padding:10px;border-radius:12px;border:1px solid #ddd;margin-bottom:15px;">
+
+  <div class="balance-card">
+    <h3>Your Balance</h3>
+    <h1>2,450 pts</h1>
+  </div>
+
+  <div class="offer-grid">
+    <div class="offer">
+      <div class="offer-top"></div>
+      <h4>Free Coffee</h4>
+      <p style="font-size:13px;color:#6b7280;">Redeem your points for coffee</p>
+      <button>Redeem Now</button>
+    </div>
+
+    <div class="offer">
+      <div class="offer-top"></div>
+      <h4>500 Bonus Points</h4>
+      <p style="font-size:13px;color:#6b7280;">Earn 500 bonus points</p>
+      <button>Redeem Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE PAGE -->
+<div id="profile" class="page">
+  <div class="profile-header">
+    <h3>My Profile</h3>
+    <h2>John Angac</h2>
+    <p>johnangac12@gmail.com</p>
+    <small>Gold Member</small>
+  </div>
+
+  <div class="profile-stats">
+    <div>
+      <h3>2,450</h3>
+      <small>Total Points</small>
+    </div>
+    <div>
+      <h3>12</h3>
+      <small>Purchased</small>
+    </div>
+  </div>
+
+  <div class="list-item">Payment Methods</div>
+  <div class="list-item">Notifications</div>
+  <div class="list-item">Privacy & Security</div>
+  <div class="list-item">Terms & Conditions</div>
+  <div class="list-item">Help & Support</div>
+
+  <button style="background:#e5e7eb;color:#111827;">Sign Out</button>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+  <div class="nav-item active" onclick="switchPage('home',this)">Home</div>
+  <div class="nav-item" onclick="switchPage('rewards',this)">Rewards</div>
+  <div class="nav-item" onclick="switchPage('profile',this)">Profile</div>
+</div>
+
+<script>
+function switchPage(pageId, el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  el.classList.add('active');
+}
+</script>
+
+</body>
+</html>
